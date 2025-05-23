@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>妮愛 N.A. Flowers｜TA 問卷</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #fffdfc;
+      padding: 2rem;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #b38f6f;
+    }
+
+    form {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #fffaf7;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    label {
+      font-weight: 600;
+      margin-top: 1.5rem;
+      display: block;
+    }
+
+    input[type="text"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .checkbox-group, .radio-group {
+      margin-top: 0.5rem;
+    }
+
+    .checkbox-group label,
+    .radio-group label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: normal;
+    }
+
+    button {
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      background: #b38f6f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    /* 感謝彈窗樣式 */
+    #thankYouModal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #thankYouModal .modal-content {
+      background: #fffaf7;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      max-width: 90%;
+      width: 400px;
+    }
+
+    #thankYouModal h2 {
+      color: #4caf50;
+      margin-bottom: 1rem;
+    }
+
+    #thankYouModal button {
+      padding: 0.6rem 1.5rem;
+      background: #b38f6f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>妮愛 N.A. Flowers｜目標客群問卷 🌷</h1>
+
+  <form id="surveyForm" action="https://docs.google.com/forms/d/e/1FAIpQLSc_qNtDvecVbDHUictRsMA1dXD1woxHFlBfVb3DmCJ0GWaUpw/formResponse">
+    <label>1. 您的年齡範圍是？</label>
+    <div class="radio-group">
+      <label><input type="radio" name="entry.326945300" value="18歲以下" required> 18歲以下</label>
+      <label><input type="radio" name="entry.326945300" value="18-24歲"> 18-24歲</label>
+      <label><input type="radio" name="entry.326945300" value="25-34歲"> 25-34歲</label>
+      <label><input type="radio" name="entry.326945300" value="35-44歲"> 35-44歲</label>
+      <label><input type="radio" name="entry.326945300" value="45歲以上"> 45歲以上</label>
+    </div>
+
+    <label>2. 您的性別是？</label>
+    <div class="radio-group">
+      <label><input type="radio" name="entry.1914051747" value="女性" required> 女性</label>
+      <label><input type="radio" name="entry.1914051747" value="男性"> 男性</label>
+      <label><input type="radio" name="entry.1914051747" value="其他/不便透露"> 其他/不便透露</label>
+    </div>
+
+    <label>3. 您的身份？（可複選）</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="entry.1612956556" value="學生"> 學生</label>
+      <label><input type="checkbox" name="entry.1612956556" value="上班族"> 上班族</label>
+      <label><input type="checkbox" name="entry.1612956556" value="自由工作者"> 自由工作者</label>
+      <label><input type="checkbox" name="entry.1612956556" value="家庭主婦"> 家庭主婦</label>
+      <label><input type="checkbox" name="entry.1612956556" value="其他"> 其他</label>
+    </div>
+
+    <label>4. 您的居住地區？</label>
+    <select name="entry.1786106654" required>
+      <option value="">請選擇</option>
+      <option value="北部">北部</option>
+      <option value="中部">中部</option>
+      <option value="南部">南部</option>
+      <option value="東部/離島">東部/離島</option>
+      <option value="海外">海外</option>
+    </select>
+
+    <label>5. 喜歡的生活風格？（可複選）</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="entry.1421402084" value="文青清新風"> 文青清新風</label>
+      <label><input type="checkbox" name="entry.1421402084" value="極簡風"> 極簡風</label>
+      <label><input type="checkbox" name="entry.1421402084" value="浪漫少女風"> 浪漫少女風</label>
+      <label><input type="checkbox" name="entry.1421402084" value="日系自然風"> 日系自然風</label>
+      <label><input type="checkbox" name="entry.1421402084" value="歐式復古風"> 歐式復古風</label>
+    </div>
+
+    <label>6. 是否認識「妮愛」這個品牌？</label>
+    <div class="radio-group">
+      <label><input type="radio" name="entry.2080064659" value="有，目前有關注中" required> 有，目前有關注中</label>
+      <label><input type="radio" name="entry.2080064659" value="有聽過但沒追蹤"> 有聽過但沒追蹤</label>
+      <label><input type="radio" name="entry.2080064659" value="沒聽過"> 沒聽過</label>
+    </div>
+
+    <label>7. 您對「妮愛」這個名字或印象有什麼聯想或感覺？</label>
+    <textarea name="entry.546308270" rows="3"></textarea>
+
+    <label>8. 有什麼建議或想對我們說的話？</label>
+    <textarea name="entry.1014788053" rows="3"></textarea>
+
+    <label>9. 是否願意收到活動消息？</label>
+    <div class="radio-group">
+      <label><input type="radio" name="entry.986639083" value="願意" required> 願意</label>
+      <label><input type="radio" name="entry.986639083" value="不需要"> 不需要</label>
+    </div>
+
+    <label>10. 聯絡方式（IG或LINE，可選填）</label>
+    <input type="text" name="entry.1353959059" />
+
+    <button type="submit">送出問卷</button>
+  </form>
+
+  <!-- 感謝彈窗 -->
+  <div id="thankYouModal">
+    <div class="modal-content">
+      <h2>🎉 感謝您填寫問卷，我們已收到！</h2>
+      <button onclick="window.location.href='https://niaiflowers.github.io/index/'">回首頁</button>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("surveyForm");
+    const thankYouModal = document.getElementById("thankYouModal");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      }).then(() => {
+        form.reset();
+        thankYouModal.style.display = "flex";
+      }).catch((error) => {
+        alert("送出失敗，請稍後再試！");
+        console.error("Error:", error);
+      });
+    });
+  </script>
+</body>
+</html>
